@@ -11,13 +11,21 @@
         object-fit: cover;
         pointer-events: none;
       }
-     video::-webkit-media-controls {
+      video::-webkit-media-controls {
         display: none;
       }
     </style>
   </head>
   <body>
-    <video width="250">
+    <video
+      width="250"
+      preload="auto"
+      onloadstart="this.playbackRate = .5;"
+      autoplay="true"
+      muted="true"
+      loop="true"
+      type="video/mp4"
+    >
       <source src="./example.mp4" type="video/mp4" />
     </video>
   </body>
